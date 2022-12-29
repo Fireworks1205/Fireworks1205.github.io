@@ -53,8 +53,8 @@ const SketchCanvas = () => {
         } 
         else if(arr[j].status === '-'){
           for (let i = 0; i < yvalues.length; i++) {
-            if (j % 2 === 0) yvalues[i] += p.sin(x) * amplitude[j];
-            else yvalues[i] -= p.cos(x) * amplitude[j];
+            if (j % 2 === 0) yvalues[i] += p.cos(x) * amplitude[j];
+            else yvalues[i] -= p.sin(x) * amplitude[j];
             x += dx[j];
           }
         }
