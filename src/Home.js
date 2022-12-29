@@ -19,7 +19,7 @@ const Home = (props) => {
   const[arr, setArr] = useState([])
   const[amplitude, setAmplitude] = useState('')
   const[period, setPeriod] = useState('')
-  const[status, setStatus] = useState('sin')
+  const[status, setStatus] = useState('+')
   const[isButtonDisabled, setIsButtonDisabled] = useState(true)
 
   return (
@@ -45,8 +45,8 @@ const Home = (props) => {
           value={status}
           onChange={(e) => setStatus(e.target.value)}
         >
-          <option value='sin'>Sin Wave</option>
-          <option value='cos'>Cos Wave</option>
+          <option value='+'>+</option>
+          <option value='-'>-(+와 반대위상)</option>
         </Select>
         <Box height='10px'/>
         <Button colorScheme='blue' onClick={() => {

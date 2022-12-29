@@ -44,17 +44,17 @@ const SketchCanvas = () => {
         // 파형 높이값 축적하기s
       for (let j = 0; j < maxwaves; j++) {
         let x = theta;
-        if(arr[j].status === 'sin'){
+        if(arr[j].status === '+'){
           for (let i = 0; i < yvalues.length; i++) {
             if (j % 2 === 0) yvalues[i] += p.sin(x) * amplitude[j];
             else yvalues[i] += p.cos(x) * amplitude[j];
             x += dx[j];
           }
         } 
-        else if(arr[j].status === 'cos'){
+        else if(arr[j].status === '-'){
           for (let i = 0; i < yvalues.length; i++) {
-            if (j % 2 === 0) yvalues[i] += p.cos(x) * amplitude[j];
-            else yvalues[i] -= p.sin(x) * amplitude[j];
+            if (j % 2 === 0) yvalues[i] += p.sin(x) * amplitude[j];
+            else yvalues[i] -= p.cos(x) * amplitude[j];
             x += dx[j];
           }
         }
